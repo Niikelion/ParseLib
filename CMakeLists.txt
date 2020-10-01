@@ -23,6 +23,7 @@ add_library(xml ${XML_SOURCES})
 
 target_include_directories(xml INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
 )
 target_include_directories(xml PRIVATE
 	include/parselib/core
@@ -32,6 +33,7 @@ add_library(json ${JSON_SOURCES})
 
 target_include_directories(json INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+	$<INSTALL_INTERFACE:${CMAKE_INSTALL_PREFIX}/include>
 )
 target_include_directories(json PRIVATE
 	include/parselib/core
